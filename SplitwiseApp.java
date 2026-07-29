@@ -8,12 +8,14 @@ public class SplitwiseApp {
         System.out.println("Track shared expenses with friends.");
         System.out.println("More features coming in the next lessons.");
 
+        String payerName="viswa";
         double totalAmount = 500.0;
 
         int numFriends =3;
 
+        System.out.println(payerName);
         System.out.println(totalAmount);
-        System.out.println(numFriends);4
+        System.out.println(numFriends);
 
     }
 
