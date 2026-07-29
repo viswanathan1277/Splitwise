@@ -1,5 +1,5 @@
 package splitwise;
-
+import java.util.Scanner;
 public class SplitwiseApp {
 
     public static void main(String[] args){
@@ -7,18 +7,24 @@ public class SplitwiseApp {
         System.out.println("=== Splitwise Console ===");
         System.out.println("Track shared expenses with friends.");
         System.out.println("More features coming in the next lessons.");
+       Scanner input =new Scanner(System.in);
 
-        String payerName="viswa";
-        double totalAmount = 500.0;
+        System.out.print("who paid ?");
+        String payerName=input.nextLine();
 
-        int numFriends =3;
-        double perPersonShare = totalAmount/numFriends;
+        System.out.print("Total amount ?");
+        double totalAmount=input.nextDouble();
+
+        int numFriends = 3;
+        double perPersonShare = totalAmount / numFriends;
+
+        String expenseLine = "%s paid ₹%.2f".formatted(payerName, totalAmount);
+        String shareLine = "Each person pays: %.2f".formatted(perPersonShare);
 
 
 
 
-        String expenseLine = payerName + " paid ₹" + totalAmount;
-        String shareLine = "Each person pays: " + perPersonShare;
+
 
         System.out.println(expenseLine);
         System.out.println(shareLine);
