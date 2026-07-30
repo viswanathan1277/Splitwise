@@ -2,6 +2,14 @@ package splitwise;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class SplitwiseApp {
+public static void addFriend(Scanner input,ArrayList<String>  friends)
+{
+    System.out.println("Enter friend name");
+    String friendName = input.nextLine();
+    friends.add(friendName);
+    System.out.println("Friend" + friendName+ "Added");
+}
+
 
     public static void main(String[] args) {
 
@@ -58,14 +66,7 @@ public class SplitwiseApp {
 
                 }
 
-                case 2 ->
-                {
-                    System.out.println("Enter friend name");
-                    String friendName = input.nextLine();
-                    friends.add(friendName);
-                    System.out.println("Friend" + friendName+ "Added");
-                    ;
-                }
+                case 2 -> addFriend(input, friends);
 
                 case 3 ->
                 {
