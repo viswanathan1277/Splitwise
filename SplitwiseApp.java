@@ -7,12 +7,12 @@ public class SplitwiseApp {
 
     public static void addFriend(Scanner input, ArrayList<Friend> friends) {
 
-        System.out.print("Friend name: ");
+        System.out.print("Friend name :");
         String friendName = input.nextLine();
 
         friends.add(new Friend(friendName));
 
-        System.out.println("Added " + friendName + ".");
+        System.out.println("Added  " + friendName + ".");
     }
         public static void main (String[]args){
         Scanner input=new Scanner(System.in);
