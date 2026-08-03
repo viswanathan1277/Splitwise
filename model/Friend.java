@@ -1,4 +1,4 @@
-package splitwise;
+package splitwise.model;
 
 public class Friend {
 
