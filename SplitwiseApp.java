@@ -9,10 +9,12 @@ public class SplitwiseApp {
 
         System.out.print("Friend name :");
         String friendName = input.nextLine();
+        Friend friend = new Friend(friendName);
 
-        friends.add(new Friend(friendName));
+        friends.add(friend);
+//        friends.add(new Friend(friendName));
 
-        System.out.println("Added  " + friendName + ".");
+        System.out.println("Added %s (id %d).".formatted(friend.getName(), friend.getId()));
     }
         public static void main (String[]args){
         Scanner input=new Scanner(System.in);
@@ -74,7 +76,7 @@ public class SplitwiseApp {
                         } else {
                             System.out.println("Friends who were added");
                             for (Friend friend : friends) {
-                                System.out.println("- " + friend.getName());
+                                System.out.println("Id%d %s".formatted(friend.getId(),friend.getName()));
                             }
                         }
                     }
