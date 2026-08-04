@@ -1,13 +1,24 @@
+/**
+ * Contains the console application and menu logic.
+ */
 package splitwise.app;
+
 import splitwise.model.ExpenseLine;
 import splitwise.model.Friend;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Console application for managing friends and expenses in Splitwise.
+ */
 public class SplitwiseApp {
 
-
+    /**
+     * Reads a friend's name and adds the friend to the list.
+     *
+     * @param input scanner used to read input
+     * @param friends list of friends
+     */
     public static void addFriend(Scanner input, ArrayList<Friend> friends) {
 
         System.out.print("Friend name :");
@@ -19,11 +30,9 @@ public class SplitwiseApp {
         System.out.println(FriendDisplay.addedMessage(friend));
     }
 
-
-    //helper class to display the friend currentely added to the array list as object
     private static class FriendDisplay {
 
-         // helper method
+
         static String addedMessage(Friend friend)
         {
             return "Added %s (id %d).".formatted(friend.getName(), friend.getId());
@@ -33,12 +42,14 @@ public class SplitwiseApp {
     {
             return "Id:%d %s".formatted(friend.getId(),friend.getName());
     }
-
-
-
-
     }
-        public static void main (String[]args){
+
+    /**
+     * Starts the Splitwise application.
+     *
+     * @param args command line arguments
+     */
+    public static void main (String[]args){
         Scanner input=new Scanner(System.in);
 
         ArrayList<Friend>friends=new ArrayList<>();
