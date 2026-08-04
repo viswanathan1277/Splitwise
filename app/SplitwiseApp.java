@@ -15,9 +15,28 @@ public class SplitwiseApp {
         Friend friend = new Friend(friendName);
 
         friends.add(friend);
-//        friends.add(new Friend(friendName));
 
-        System.out.println("Added %s (id %d).".formatted(friend.getName(), friend.getId()));
+        System.out.println(FriendDisplay.addedMessage(friend));
+    }
+
+
+    //helper class to display the friend currentely added to the array list as object
+    private static class FriendDisplay {
+
+         // helper method
+        static String addedMessage(Friend friend)
+        {
+            return "Added %s (id %d).".formatted(friend.getName(), friend.getId());
+        }
+
+        static String DisplayFriendList(Friend friend)
+    {
+            return "Id:%d %s".formatted(friend.getId(),friend.getName());
+    }
+
+
+
+
     }
         public static void main (String[]args){
         Scanner input=new Scanner(System.in);
@@ -79,7 +98,7 @@ public class SplitwiseApp {
                         } else {
                             System.out.println("Friends who were added");
                             for (Friend friend : friends) {
-                                System.out.println("Id%d %s".formatted(friend.getId(),friend.getName()));
+                                System.out.println(SplitwiseApp.FriendDisplay.DisplayFriendList(friend));
                             }
                         }
                     }
@@ -96,5 +115,6 @@ public class SplitwiseApp {
             }
         }
     }
+
 
 
